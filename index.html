@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con elementos Paper</title>
+
+  <script type="module">
+    import '@polymer/paper-styles/paper-styles.js';
+    import '@polymer/paper-button/paper-button.js';
+    import '@polymer/paper-card/paper-card.js';
+    import '@polymer/app-layout/app-layout.js';
+    import '@polymer/paper-input/paper-input.js';
+  </script>
+
+  <style>
+    .contact-section {
+      background-color: #f0f0f0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0078d4;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <!-- Encabezado -->
+    <paper-header-panel class="medium-tall">
+      <div class="paper-header" slot="header">
+        <img src="/images/Espe 100 Logo.png" alt="Logo del Sitio" width="35%" height="auto">
+        <h1>Página web usando elementos paper-elements</h1>
+      </div>
+      <paper-toolbar class="medium-tall">
+        <div class="middle"></div>
+        <paper-button>Inicio</paper-button>
+        <paper-button>Avatar</paper-button>
+        <paper-button>Formulario</paper-button>
+        <paper-button>Contacto</paper-button>
+      </paper-toolbar>
+      <div class="content" slot="content">
+
+        <paper-card heading="Usuario" image="/images/avatar.png" height="100px">
+          <div class="card-content">
+            <p>Desarrolle un mensaje ante cualquier inquietud</p>
+          </div>
+          <div class="card-actions">
+            <paper-button>Ingresar</paper-button>
+            <paper-button>Salir</paper-button>
+          </div>
+        </paper-card>
+        <br>
+
+        <!-- Formulario -->
+        <div class="card-content">
+          <form>
+            <paper-input label="Nombre" required></paper-input>
+            <paper-input label="Correo electrónico" type="email" required></paper-input>
+            <paper-input label="Mensaje" required></paper-input>
+            <paper-button raised>Enviar</paper-button>
+          </form>
+        </div>
+
+      </div>
+    </paper-header-panel>
+
+    <!-- Pie de página -->
+    <paper-toolbar class="medium-tall">
+      <div class="bottom">
+        <div class="contact-section">
+          <h2>Contacto</h2>
+          <div class="contact-info">Universidad de las Fuerzas Armadas - ESPE</div>
+          <div class="contact-info">Teléfono: +593 98 495 1116</div>
+          <div class="contact-info">Correo electrónico: contacto@grupo05.com</div>
+          <div class="contact-links">
+            <a href="https://www.facebook.com/ejemplo" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com/ejemplo" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/ejemplo" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </paper-toolbar>
+  </center>
+</body>
+
+</html>
